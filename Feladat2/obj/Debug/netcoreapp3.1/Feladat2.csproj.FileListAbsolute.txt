@@ -1,0 +1,13 @@
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\bin\Debug\netcoreapp3.1\Feladat2.exe
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\bin\Debug\netcoreapp3.1\Feladat2.deps.json
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\bin\Debug\netcoreapp3.1\Feladat2.runtimeconfig.json
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\bin\Debug\netcoreapp3.1\Feladat2.runtimeconfig.dev.json
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\bin\Debug\netcoreapp3.1\Feladat2.dll
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\bin\Debug\netcoreapp3.1\Feladat2.pdb
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\obj\Debug\netcoreapp3.1\Feladat2.csprojAssemblyReference.cache
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\obj\Debug\netcoreapp3.1\Feladat2.AssemblyInfoInputs.cache
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\obj\Debug\netcoreapp3.1\Feladat2.AssemblyInfo.cs
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\obj\Debug\netcoreapp3.1\Feladat2.csproj.CoreCompileInputs.cache
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\obj\Debug\netcoreapp3.1\Feladat2.dll
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\obj\Debug\netcoreapp3.1\Feladat2.pdb
+D:\VS Projects\OKTV_2008_II_Feladatok\Feladat2\obj\Debug\netcoreapp3.1\Feladat2.genruntimeconfig.cache
