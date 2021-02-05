@@ -1,0 +1,13 @@
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\bin\Debug\netcoreapp3.1\HanoiTornya.exe
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\bin\Debug\netcoreapp3.1\HanoiTornya.deps.json
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\bin\Debug\netcoreapp3.1\HanoiTornya.runtimeconfig.json
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\bin\Debug\netcoreapp3.1\HanoiTornya.runtimeconfig.dev.json
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\bin\Debug\netcoreapp3.1\HanoiTornya.dll
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\bin\Debug\netcoreapp3.1\HanoiTornya.pdb
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\obj\Debug\netcoreapp3.1\HanoiTornya.csprojAssemblyReference.cache
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\obj\Debug\netcoreapp3.1\HanoiTornya.AssemblyInfoInputs.cache
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\obj\Debug\netcoreapp3.1\HanoiTornya.AssemblyInfo.cs
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\obj\Debug\netcoreapp3.1\HanoiTornya.csproj.CoreCompileInputs.cache
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\obj\Debug\netcoreapp3.1\HanoiTornya.dll
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\obj\Debug\netcoreapp3.1\HanoiTornya.pdb
+D:\VS Projects\OKTV_2008_II_Feladatok\HanoiTornya\obj\Debug\netcoreapp3.1\HanoiTornya.genruntimeconfig.cache
