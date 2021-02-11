@@ -1,52 +1,75 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using System.Collections.Generic;
 
 namespace Feladat5
 {
     class Program
     {
-        static int N;
-        static int[] jobs;
-        static List<int> firstMachine;
-        static List<int> secondMachine;
         static void Main(string[] args)
         {
-            N = int.Parse(Console.ReadLine());
-            jobs = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            firstMachine = new List<int>();
-            secondMachine = new List<int>();
-            firstMachine.Add(0);
-            FillMachines(ref firstMachine, ref secondMachine, 1);
-            Console.WriteLine(Math.Max(SumOfMachine(firstMachine), SumOfMachine(secondMachine)));
-            Console.WriteLine(string.Join(" ", firstMachine.Select(x => x + 1)));
-            Console.WriteLine(string.Join(" ", secondMachine.Select(x => x + 1)));
+            int N = int.Parse(Console.ReadLine());
+            //List<int> jobs = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            List<int> jobs = Enumerable.Range(1, N).ToList();
+            FillMachines(jobs);
         }
-        static int FillMachines(ref List<int> firstMachine, ref List<int> secondMachine, int index)
+        static void FillMachines(List<int> jobs)
         {
-            if(index == N)
+            int jobsSum = jobs.Sum();
+            int bestSplit = jobsSum / 2;
+            int[] res = null;
+            int i;
+            for (i = bestSplit; res == null; i--)
             {
-                return Math.Max(SumOfMachine(firstMachine), SumOfMachine(secondMachine));
+                Dictionary<int, int[]> memo = new Dictionary<int, int[]>();
+                res = HowSum(i, jobs, ref memo);
             }
-            List<int> tempFirst = new List<int>(firstMachine);
-            List<int> tempSecond = new List<int>(secondMachine);
-            tempFirst.Add(index);
-            tempSecond.Add(index);
-            int firstResult = FillMachines(ref tempFirst, ref secondMachine, index + 1);
-            int secondResult = FillMachines(ref firstMachine, ref tempSecond, index + 1);
-            if (firstResult < secondResult)
+            HashSet<int> result = res.ToHashSet();
+            StringBuilder sb = new StringBuilder();
+            sb.Append(jobsSum - i - 1).AppendLine();
+            List<int> firstMachine = new List<int>();
+            List<int> secondMachine = new List<int>();
+            for(i = 0; i < jobs.Count; i++)
             {
-                firstMachine = tempFirst;
+                if(result.Contains(jobs[i]))
+                {
+                    firstMachine.Add(i + 1);
+                    result.Remove(jobs[i]);
+                }
+                else
+                {
+                    secondMachine.Add(i + 1);
+                }
             }
-            else
-            {
-                secondMachine = tempSecond;
-            }
-            return Math.Max(SumOfMachine(firstMachine), SumOfMachine(secondMachine));
+            sb.AppendJoin(' ', firstMachine).AppendLine();
+            sb.AppendJoin(' ', secondMachine);
+            Console.WriteLine(sb.ToString());
         }
-        static int SumOfMachine(List<int> machine)
+        static int[] HowSum(int targetSum, List<int> numbers, ref Dictionary<int, int[]> memo)
         {
-            return machine.Sum(x => jobs[x]);
+            if (memo.ContainsKey(targetSum)) return memo[targetSum];
+            if (targetSum == 0) return new int[] { };
+            if (targetSum < 0) return null;
+            
+            foreach (int number in numbers)
+            {
+                int remainder = targetSum - number;
+                List<int> passingNumbers = new List<int>(numbers);
+                passingNumbers.Remove(number);
+                int[] remainderResult = HowSum(remainder, passingNumbers, ref memo);
+                if(remainderResult != null)
+                {
+                    int[] result = new int[remainderResult.Length + 1];
+                    Array.Copy(remainderResult, result, remainderResult.Length);
+                    result[result.Length - 1] = number;
+                    memo[targetSum] = result;
+                    return result;
+                }
+            }
+
+            memo[targetSum] = null;
+            return null;
         }
     }
 }
